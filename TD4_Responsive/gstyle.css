@@ -1,0 +1,61 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 60em;
+    margin: 0 auto;
+}
+
+.row:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.row div {
+    float: left;
+    height: 1.5em;
+    border: 1px solid black;
+}
+
+.col1,
+.col2 {
+    margin: 1em 0 0 1em;
+}
+
+.col1,
+.col2 {
+    width: calc((100% - 7em) / 4);
+    background-color: red;
+}
+
+/*---tablette----*/
+
+@media (max-width: 800px)
+{
+    .wrapper {
+        width: 100%;
+    }
+    .col1,
+    .col2 {
+        width: calc((100% - 2em) / 2);
+        }
+
+    }
+
+/*---smartphone----*/
+
+@media (max-width: 400px) {
+    html{
+        font-size: 24px;
+    }
+
+    .col1,
+    .col2
+    {
+        width: calc(100% - 2em);
+    }
+}
